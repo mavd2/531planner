@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Three One Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="title-left">Current Cycle</h2>
+            <h2 class="title-right">Five Three One Planner</h2>
+        </header>
+        <main>
+            <section class="table-section">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Lift</th>
+                            <th>Week 1 (5/5/5+)</th>
+                            <th>Week 2 (3/3/3+)</th>
+                            <th>Week 3 (5/3/1+)</th>
+                            <th>Deload</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="saveTableButton">Save Table as Image</button>
+                <button id="nextCycleButton">Next Cycle</button>
+                <button id="resetButton">Reset</button>
+            </section>
+
+            <section class="form-section">
+                <form id="maxLiftsForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="squatMax">Squat Max (kg):</label>
+                            <input type="number" id="squatMax" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sldlMax">SLDL Max (kg):</label>
+                            <input type="number" id="sldlMax" value="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="benchMax">Bench Press Max (kg):</label>
+                            <input type="number" id="benchMax" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inclineMax">Incline Press Max (kg):</label>
+                            <input type="number" id="inclineMax" value="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="deadliftMax">Deadlift Max (kg):</label>
+                            <input type="number" id="deadliftMax" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zercherMax">Zercher Squat Max (kg):</label>
+                            <input type="number" id="zercherMax" value="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pressMax">Shoulder Press Max (kg):</label>
+                            <input type="number" id="pressMax" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="closeGripMax">Close Grip Bench Press Max (kg):</label>
+                            <input type="number" id="closeGripMax" value="0" required>
+                        </div>
+                    </div>
+                    <div class="form-row button-row">
+                        <div class="form-group button-group">
+                            <button type="button" onclick="generateTable()">Calculate Cycle</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <script src="script.js" type="module"></script>
+    </div>
+</body>
+</html>
